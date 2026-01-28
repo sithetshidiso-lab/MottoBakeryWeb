@@ -1,65 +1,41 @@
-import React from 'react';
-import { ShoppingCart, Clock, MapPin, MessageCircle } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motto Bakery | Alex</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+    <nav class="flex justify-between items-center p-6 bg-white shadow-sm">
+        <h1 class="text-2xl font-bold">Motto Bakery</h1>
+        <a href="https://wa.me/27XXXXXXXXX" class="bg-black text-white px-4 py-2 rounded-full text-sm font-medium">ORDER</a>
+    </nav>
 
-const MottoBakeryLanding = () => {
-  const whatsappNumber = "27XXXXXXXXX"; // Replace with actual number
-  const whatsappMessage = encodeURIComponent("Hi Motto Bakery! I'd like to see your fresh bake list for today.");
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-
-  return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
-      {/* Navigation */}
-      <nav className="flex justify-between items-center p-6 bg-white shadow-sm">
-        <h1 className="text-2xl font-bold tracking-tight">Motto Bakery</h1>
-        <a href={whatsappLink} className="bg-black text-white px-4 py-2 rounded-full text-sm font-medium">
-          ORDER NOW
-        </a>
-      </nav>
-
-      {/* Hero Section */}
-      <section className="px-6 py-16 text-center">
-        <span className="text-orange-600 font-semibold tracking-widest text-sm uppercase">Opening February 2026</span>
-        <h2 className="text-5xl font-extrabold mt-4 mb-6 leading-tight">
-          Baked Fresh <br /> in the Heart <br /> of Alex
-        </h2>
-        <p className="text-slate-600 max-w-md mx-auto mb-8">
-          Artisanal quality meets township grit. We're bringing real bread back to the community.
-        </p>
+    <section class="px-6 py-16 text-center">
+        <span class="text-orange-600 font-bold tracking-widest text-xs uppercase">Opening February 2026</span>
+        <h2 class="text-5xl font-extrabold mt-4 mb-6 leading-tight">Baked Fresh <br> in the Heart <br> of Alex</h2>
+        <p class="text-slate-600 max-w-md mx-auto mb-8">Artisanal quality meets township grit. We're bringing real bread back to the community.</p>
         
-        {/* Primary WhatsApp Call to Action */}
-        <a 
-          href={whatsappLink}
-          className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg"
-        >
-          <MessageCircle size={24} />
-          Order via WhatsApp
+        <a href="https://wa.me/27XXXXXXXXX?text=Hi%20Motto%20Bakery!%20I'd%20like%20to%20order." 
+           class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-green-600 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg text-lg">
+           Order via WhatsApp
         </a>
-      </section>
+    </section>
 
-      {/* Info Grid */}
-      <section className="grid gap-6 px-6 pb-20">
-        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-          <div className="flex items-center gap-3 mb-2 text-orange-600">
-            <Clock size={20} />
-            <h3 className="font-bold">Daily Bakes</h3>
-          </div>
-          <p className="text-slate-500">06:00 AM — Until Sold Out</p>
+    <section class="grid gap-4 px-6 max-w-md mx-auto pb-20">
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+            <h3 class="font-bold text-orange-600">Daily Bakes</h3>
+            <p class="text-slate-500 text-sm">06:00 AM — Until Sold Out</p>
         </div>
-
-        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-          <div className="flex items-center gap-3 mb-2 text-orange-600">
-            <MapPin size={20} />
-            <h3 className="font-bold">Location</h3>
-          </div>
-          <p className="text-slate-500">Alexandra, Johannesburg</p>
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+            <h3 class="font-bold text-orange-600">Location</h3>
+            <p class="text-slate-500 text-sm">Alexandra, Johannesburg</p>
         </div>
-      </section>
+    </section>
 
-      <footer className="text-center pb-10 text-slate-400 text-sm italic">
-        "let's count what matters"
-      </footer>
-    </div>
-  );
-};
-
-export default MottoBakeryLanding;
+    <footer class="text-center pb-10 text-slate-400 text-xs uppercase tracking-widest">
+        let's count what matters
+    </footer>
+</body>
+</html>

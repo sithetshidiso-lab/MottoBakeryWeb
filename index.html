@@ -2,80 +2,61 @@ import React from 'react';
 import { ShoppingCart, Clock, MapPin, MessageCircle } from 'lucide-react';
 
 const MottoBakeryLanding = () => {
-  const whatsappNumber = "27XXXXXXXXX"; // Replace with your WhatsApp Number
+  const whatsappNumber = "27XXXXXXXXX"; // Replace with actual number
   const whatsappMessage = encodeURIComponent("Hi Motto Bakery! I'd like to see your fresh bake list for today.");
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-yellow-500">
+    <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
       {/* Navigation */}
-      <nav className="border-b border-gray-800 p-4 flex justify-between items-center bg-black sticky top-0 z-50">
-        <h1 className="text-xl font-bold tracking-tighter text-yellow-500 uppercase">Motto Bakery</h1>
-        <a 
-          href={`https://wa.me/${whatsappNumber}`}
-          className="bg-yellow-500 text-black px-4 py-2 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-yellow-400 transition"
-        >
-          <MessageCircle size={18} /> ORDER
+      <nav className="flex justify-between items-center p-6 bg-white shadow-sm">
+        <h1 className="text-2xl font-bold tracking-tight">Motto Bakery</h1>
+        <a href={whatsappLink} className="bg-black text-white px-4 py-2 rounded-full text-sm font-medium">
+          ORDER NOW
         </a>
       </nav>
 
       {/* Hero Section */}
-      <header className="relative h-[70vh] flex items-center justify-center overflow-hidden border-b border-gray-800">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-40 grayscale hover:grayscale-0 transition-all duration-700"></div>
-        <div className="relative z-10 text-center px-4">
-          <p className="text-yellow-500 font-mono tracking-widest mb-2 uppercase">Opening February 2026</p>
-          <h2 className="text-5xl md:text-7xl font-black uppercase leading-none tracking-tighter">
-            Baked Fresh <br /> in the Heart <br /> of Alex
-          </h2>
-          <p className="mt-6 text-gray-400 max-w-md mx-auto text-lg leading-relaxed">
-            Artisanal quality meets township grit. We're bringing real bread back to the community.
-          </p>
-        </div>
-      </header>
+      <section className="px-6 py-16 text-center">
+        <span className="text-orange-600 font-semibold tracking-widest text-sm uppercase">Opening February 2026</span>
+        <h2 className="text-5xl font-extrabold mt-4 mb-6 leading-tight">
+          Baked Fresh <br /> in the Heart <br /> of Alex
+        </h2>
+        <p className="text-slate-600 max-w-md mx-auto mb-8">
+          Artisanal quality meets township grit. We're bringing real bread back to the community.
+        </p>
+        
+        {/* Primary WhatsApp Call to Action */}
+        <a 
+          href={whatsappLink}
+          className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg"
+        >
+          <MessageCircle size={24} />
+          Order via WhatsApp
+        </a>
+      </section>
 
       {/* Info Grid */}
-      <section className="p-8 grid md:grid-cols-3 gap-8 border-b border-gray-800 bg-[#0a0a0a]">
-        <div className="flex flex-col items-center text-center p-6 border border-gray-800 rounded-lg">
-          <Clock className="text-yellow-500 mb-4" size={32} />
-          <h3 className="font-bold uppercase tracking-wide">Daily Bakes</h3>
-          <p className="text-gray-500 text-sm mt-2 font-mono">06:00 AM — Sold Out</p>
+      <section className="grid gap-6 px-6 pb-20">
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+          <div className="flex items-center gap-3 mb-2 text-orange-600">
+            <Clock size={20} />
+            <h3 className="font-bold">Daily Bakes</h3>
+          </div>
+          <p className="text-slate-500">06:00 AM — Until Sold Out</p>
         </div>
-        <div className="flex flex-col items-center text-center p-6 border border-gray-800 rounded-lg">
-          <MapPin className="text-yellow-500 mb-4" size={32} />
-          <h3 className="font-bold uppercase tracking-wide">Location</h3>
-          <p className="text-gray-500 text-sm mt-2 font-mono uppercase">Alexandra, Johannesburg</p>
-        </div>
-        <div className="flex flex-col items-center text-center p-6 border border-gray-800 rounded-lg">
-          <ShoppingCart className="text-yellow-500 mb-4" size={32} />
-          <h3 className="font-bold uppercase tracking-wide">WhatsApp Orders</h3>
-          <p className="text-gray-500 text-sm mt-2 font-mono uppercase text-yellow-500/80">Open 24/7</p>
+
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+          <div className="flex items-center gap-3 mb-2 text-orange-600">
+            <MapPin size={20} />
+            <h3 className="font-bold">Location</h3>
+          </div>
+          <p className="text-slate-500">Alexandra, Johannesburg</p>
         </div>
       </section>
 
-      {/* Menu Preview */}
-      <section className="p-8 pb-24">
-        <h3 className="text-2xl font-bold uppercase tracking-tighter border-l-4 border-yellow-500 pl-4 mb-8">Our Signature Bakes</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {.map((item) => (
-            <div key={item} className="aspect-square bg-gray-900 border border-gray-800 flex items-end p-4 group cursor-pointer hover:border-yellow-500 transition">
-              <span className="font-bold uppercase tracking-tighter group-hover:text-yellow-500">{item}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Sticky WhatsApp Button */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <a 
-          href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
-          className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center animate-bounce hover:animate-none transition-all"
-        >
-          <MessageCircle size={32} />
-        </a>
-      </div>
-
-      {/* Footer */}
-      <footer className="p-8 text-center text-gray-600 border-t border-gray-800 font-mono text-xs uppercase tracking-widest">
-        &copy; 2026 Motto Bakery — Powered by BevCount360
+      <footer className="text-center pb-10 text-slate-400 text-sm italic">
+        "let's count what matters"
       </footer>
     </div>
   );

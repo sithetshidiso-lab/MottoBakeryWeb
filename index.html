@@ -3,73 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motto Bakery | Alex</title>
+    <title>Motto Bakery | Let's count what matters</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* A warm, homely blend of Peach and Brown (Terracotta) */
-        body { background-color: #d9a081; } 
+        body { background-color: #FDF5E6; color: #4A3728; }
+        .hero-title { color: #4A3728; font-weight: 800; }
     </style>
 </head>
-<body class="text-slate-900 font-sans">
-    <nav class="flex justify-between items-center p-6 bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-        <h1 class="text-2xl font-black tracking-tighter uppercase">Motto Bakery</h1>
-        <a href="https://wa.me/27826763640" class="bg-orange-900 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg">ORDER NOW</a>
-    </nav>
+<body class="font-sans">
 
-    <section class="px-6 py-12 text-center text-orange-50">
-        <div class="inline-block bg-orange-900/20 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4">
-            Opening February 2026
+    <header class="text-center py-12 px-6">
+        <h1 class="text-5xl hero-title mb-6">MOTTO BAKERY</h1>
+        <p class="max-w-2xl mx-auto text-lg leading-relaxed">
+            Motto Bakery was founded in 2004 and has proudly served Alexandra and the greater Johannesburg area ever since. 
+            Starting from a humble kitchen at 16th Avenue, right where Ga Masechaba’s now stands, we’ve grown into a trusted 
+            neighbourhood bakery with three locations today.
+        </p>
+    </header>
+
+    <section class="max-w-5xl mx-auto px-6 py-8">
+        <h2 class="text-3xl font-bold text-center mb-10 border-b-2 border-amber-200 pb-2">OUR PRODUCTS</h2>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+            <div><div class="bg-gray-300 h-32 mb-2 rounded shadow-inner"></div><p class="font-bold">Scones R2</p></div>
+            <div><div class="bg-gray-300 h-32 mb-2 rounded shadow-inner"></div><p class="font-bold">Rock cakes R3</p></div>
+            <div><div class="bg-gray-300 h-32 mb-2 rounded shadow-inner"></div><p class="font-bold">Fatcakes 1.50</p></div>
+            <div><div class="bg-gray-300 h-32 mb-2 rounded shadow-inner"></div><p class="font-bold">Mini loave R10</p></div>
+            <div><div class="bg-gray-300 h-32 mb-2 rounded shadow-inner"></div><p class="font-bold">Buns R1.50</p></div>
         </div>
-        <h2 class="text-5xl font-extrabold mb-4 leading-tight drop-shadow-sm">Baked Fresh <br> in the Heart <br> of Alex</h2>
-        <p class="text-orange-100 max-w-xs mx-auto text-lg italic opacity-90">"Artisanal quality meets township grit."</p>
     </section>
 
-    <section class="px-6 pb-10">
-        <div class="bg-white/90 rounded-3xl p-6 shadow-2xl max-w-md mx-auto">
-            <h3 class="text-2xl font-bold mb-6 border-b pb-2 border-orange-200">Today's Fresh Bakes</h3>
-            <ul class="space-y-4">
-                <li class="flex justify-between items-center border-b border-dotted border-slate-300 pb-2">
-                    <span class="font-semibold text-lg">Mini Loaves</span>
-                    <span class="bg-orange-100 text-orange-900 px-3 py-1 rounded-lg font-bold">R10.00</span>
-                </li>
-                <li class="flex justify-between items-center border-b border-dotted border-slate-300 pb-2">
-                    <span class="font-semibold text-lg">Rock Cakes</span>
-                    <span class="bg-orange-100 text-orange-900 px-3 py-1 rounded-lg font-bold">R3.00</span>
-                </li>
-                <li class="flex justify-between items-center border-b border-dotted border-slate-300 pb-2">
-                    <span class="font-semibold text-lg">Scones</span>
-                    <span class="bg-orange-100 text-orange-900 px-3 py-1 rounded-lg font-bold">R2.00</span>
-                </li>
-                <li class="flex justify-between items-center border-b border-dotted border-slate-300 pb-2">
-                    <span class="font-semibold text-lg">Fat Cakes</span>
-                    <span class="bg-orange-100 text-orange-900 px-3 py-1 rounded-lg font-bold">R1.50</span>
-                </li>
-                <li class="flex justify-between items-center">
-                    <span class="font-semibold text-lg">Buns</span>
-                    <span class="bg-orange-100 text-orange-900 px-3 py-1 rounded-lg font-bold">R1.50</span>
-                </li>
-            </ul>
-
-            <a href="https://wa.me/27826763640?text=Hi%20Motto%20Bakery!%20I'd%20like%20to%20place%20an%20order." 
-               class="mt-8 w-full flex items-center justify-center gap-3 bg-[#25D366] hover:scale-105 text-white py-4 rounded-2xl font-black transition-all shadow-xl text-lg uppercase">
-                Chat to Order
+    <section class="max-w-5xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-10">
+        <div class="flex-1">
+            <h2 class="text-3xl font-bold mb-4">PLACE AN ORDER</h2>
+            <p class="text-xl mb-6">Bulk orders also accepted</p>
+            
+            <a href="https://wa.me/2782676640?text=Hi%20Motto%20Bakery,%20I%20would%20like%20to%20place%20an%20order." 
+               target="_blank" 
+               class="inline-flex items-center gap-3 bg-[#FFEBCD] border border-amber-200 px-8 py-3 rounded-lg text-2xl font-bold hover:bg-amber-100 transition shadow-md">
+                <i class="fab fa-whatsapp text-green-600"></i> +27 82 676 6640
             </a>
+
+            <p class="mt-8 italic text-lg text-gray-700">
+                “Every bite carries the taste of home, the touch of experience, and the joy of sharing good food.”
+            </p>
+        </div>
+        <div class="flex-1">
+            <div class="bg-gray-400 w-full h-[400px] rounded-2xl shadow-xl"></div>
         </div>
     </section>
 
-    <section class="grid gap-4 px-6 max-w-md mx-auto pb-16">
-        <div class="bg-orange-900/10 p-5 rounded-2xl border border-orange-900/20 text-orange-950">
-            <h4 class="font-bold uppercase text-xs tracking-widest mb-1">Availability</h4>
-            <p class="text-sm font-medium">06:00 AM — Until Sold Out Daily</p>
-        </div>
-        <div class="bg-orange-900/10 p-5 rounded-2xl border border-orange-900/20 text-orange-950">
-            <h4 class="font-bold uppercase text-xs tracking-widest mb-1">Location</h4>
-            <p class="text-sm font-medium">Alexandra, Johannesburg</p>
+    <section class="bg-[#F8E8D0] py-12 text-center">
+        <h2 class="text-3xl font-bold mb-6">VISIT US</h2>
+        <div class="space-y-4 text-lg">
+            <p><i class="fas fa-map-marker-alt"></i> 29 – 4th Street, Marlboro, 2090</p>
+            <p class="font-semibold">Near Footgear</p>
+            <p>16th Avenue, near Broadway Place</p>
         </div>
     </section>
 
-    <footer class="text-center pb-12 text-orange-900 font-bold text-xs uppercase tracking-[0.2em]">
-        let's count what matters
+    <footer class="text-center py-6 text-sm opacity-60">
+        © 2026 Motto Bakery - Let's count what matters.
     </footer>
+
 </body>
 </html>

@@ -3,67 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motto Bakery | Let's count what matters</title>
+    <title>Motto Bakery | Let's Count What Matters</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #FDF5E6; color: #4A3728; }
-        .hero-title { color: #4A3728; font-weight: 800; }
+        body { background-color: #FDF5E6; color: #4A3728; scroll-behavior: smooth; }
+        .bakery-font { font-family: 'Trebuchet MS', sans-serif; }
     </style>
 </head>
-<body class="font-sans">
+<body class="bakery-font">
 
-    <header class="text-center py-12 px-6">
-        <h1 class="text-5xl hero-title mb-6">MOTTO BAKERY</h1>
-        <p class="max-w-2xl mx-auto text-lg leading-relaxed">
-            Motto Bakery was founded in 2004 and has proudly served Alexandra and the greater Johannesburg area ever since. 
-            Starting from a humble kitchen at 16th Avenue, right where Ga Masechaba’s now stands, we’ve grown into a trusted 
-            neighbourhood bakery with three locations today.
+    <header class="text-center py-16 px-6 max-w-4xl mx-auto">
+        <h1 class="text-6xl font-black mb-6 tracking-tight">MOTTO BAKERY</h1>
+        <p class="text-xl leading-relaxed opacity-90">
+            Founded in 2004, we've proudly served Alexandra and the greater Johannesburg area. 
+            From 16th Avenue to three thriving locations, we remain your trusted neighborhood bakery.
         </p>
     </header>
 
-    <section class="max-w-5xl mx-auto px-6 py-8">
-        <h2 class="text-3xl font-bold text-center mb-10 border-b-2 border-amber-200 pb-2">OUR PRODUCTS</h2>
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
-            <div><div class="bg-gray-300 h-32 mb-2 rounded shadow-inner"></div><p class="font-bold">Scones R2</p></div>
-            <div><div class="bg-gray-300 h-32 mb-2 rounded shadow-inner"></div><p class="font-bold">Rock cakes R3</p></div>
-            <div><div class="bg-gray-300 h-32 mb-2 rounded shadow-inner"></div><p class="font-bold">Fatcakes 1.50</p></div>
-            <div><div class="bg-gray-300 h-32 mb-2 rounded shadow-inner"></div><p class="font-bold">Mini loave R10</p></div>
-            <div><div class="bg-gray-300 h-32 mb-2 rounded shadow-inner"></div><p class="font-bold">Buns R1.50</p></div>
+    <section class="max-w-6xl mx-auto px-6 py-10">
+        <h2 class="text-2xl font-bold text-center mb-8 uppercase tracking-widest border-b-2 border-amber-200 inline-block mx-auto flex justify-center w-max">Our Products</h2>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+            <div class="group cursor-pointer">
+                <div class="bg-amber-100 aspect-square mb-3 rounded-xl shadow-sm border border-amber-200 flex items-center justify-center group-hover:scale-105 transition-transform overflow-hidden">
+                    <span class="text-amber-300"><i class="fas fa-bread-slice text-4xl"></i></span>
+                </div>
+                <p class="font-bold">Scones <span class="text-amber-700">R2</span></p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="bg-amber-100 aspect-square mb-3 rounded-xl shadow-sm border border-amber-200 flex items-center justify-center group-hover:scale-105 transition-transform">
+                    <span class="text-amber-300"><i class="fas fa-cookie text-4xl"></i></span>
+                </div>
+                <p class="font-bold">Rock Cakes <span class="text-amber-700">R3</span></p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="bg-amber-100 aspect-square mb-3 rounded-xl shadow-sm border border-amber-200 flex items-center justify-center group-hover:scale-105 transition-transform">
+                    <span class="text-amber-300"><i class="fas fa-circle text-4xl"></i></span>
+                </div>
+                <p class="font-bold">Fatcakes <span class="text-amber-700">R1.50</span></p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="bg-amber-100 aspect-square mb-3 rounded-xl shadow-sm border border-amber-200 flex items-center justify-center group-hover:scale-105 transition-transform">
+                    <span class="text-amber-300"><i class="fas fa-bread-slice text-4xl"></i></span>
+                </div>
+                <p class="font-bold">Mini Loaf <span class="text-amber-700">R10</span></p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="bg-amber-100 aspect-square mb-3 rounded-xl shadow-sm border border-amber-200 flex items-center justify-center group-hover:scale-105 transition-transform">
+                    <span class="text-amber-300"><i class="fas fa-hamburger text-4xl"></i></span>
+                </div>
+                <p class="font-bold">Buns <span class="text-amber-700">R1.50</span></p>
+            </div>
         </div>
     </section>
 
-    <section class="max-w-5xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-10">
-        <div class="flex-1">
-            <h2 class="text-3xl font-bold mb-4">PLACE AN ORDER</h2>
-            <p class="text-xl mb-6">Bulk orders also accepted</p>
+    <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h2 class="text-4xl font-extrabold mb-4 uppercase">Place An Order</h2>
+            <p class="text-lg mb-8 text-gray-700 font-medium">Bulk orders accepted. Get fresh bakes delivered or ready for pickup.</p>
             
-            <a href="https://wa.me/2782676640?text=Hi%20Motto%20Bakery,%20I%20would%20like%20to%20place%20an%20order." 
-               target="_blank" 
-               class="inline-flex items-center gap-3 bg-[#FFEBCD] border border-amber-200 px-8 py-3 rounded-lg text-2xl font-bold hover:bg-amber-100 transition shadow-md">
-                <i class="fab fa-whatsapp text-green-600"></i> +27 82 676 6640
+            <a href="https://wa.me/27826763640?text=Hi%20Motto%20Bakery,%20I'd%20like%20to%20place%20an%20order." 
+               class="inline-flex items-center gap-4 bg-[#25D366] text-white px-8 py-4 rounded-full text-xl font-bold hover:bg-green-600 transition-all shadow-lg transform hover:-translate-y-1">
+                <i class="fab fa-whatsapp text-2xl"></i> +27 82 676 3640
             </a>
 
-            <p class="mt-8 italic text-lg text-gray-700">
-                “Every bite carries the taste of home, the touch of experience, and the joy of sharing good food.”
-            </p>
+            <div class="mt-12 border-l-4 border-amber-400 pl-4">
+                <p class="italic text-xl text-gray-800 leading-relaxed">
+                    “Every bite carries the taste of home, the touch of experience, and the joy of sharing good food.”
+                </p>
+            </div>
         </div>
-        <div class="flex-1">
-            <div class="bg-gray-400 w-full h-[400px] rounded-2xl shadow-xl"></div>
-        </div>
-    </section>
-
-    <section class="bg-[#F8E8D0] py-12 text-center">
-        <h2 class="text-3xl font-bold mb-6">VISIT US</h2>
-        <div class="space-y-4 text-lg">
-            <p><i class="fas fa-map-marker-alt"></i> 29 – 4th Street, Marlboro, 2090</p>
-            <p class="font-semibold">Near Footgear</p>
-            <p>16th Avenue, near Broadway Place</p>
+        <div class="relative">
+            <div class="bg-gray-300 rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] flex items-center justify-center text-gray-500 italic">
+                [Insert Baker Image Here]
+            </div>
         </div>
     </section>
 
-    <footer class="text-center py-6 text-sm opacity-60">
-        © 2026 Motto Bakery - Let's count what matters.
+    <footer class="bg-white/50 backdrop-blur-sm py-16">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 class="text-3xl font-bold mb-8">VISIT US</h2>
+            <div class="grid md:grid-cols-2 gap-8 text-lg">
+                <div class="p-6 bg-white rounded-2xl shadow-sm">
+                    <p class="font-bold text-amber-800 mb-2">Marlboro Branch</p>
+                    <p>29 – 4th Street, Marlboro, 2090</p>
+                    <p class="text-sm opacity-70">Near Footgear</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm">
+                    <p class="font-bold text-amber-800 mb-2">Alexandra Branch</p>
+                    <p>16th Avenue</p>
+                    <p class="text-sm opacity-70">Near Broadway Place</p>
+                </div>
+            </div>
+            <p class="mt-12 font-bold text-amber-900 tracking-tighter uppercase italic">Let's count what matters</p>
+        </div>
     </footer>
 
 </body>
